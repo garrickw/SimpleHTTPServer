@@ -5,4 +5,5 @@ This is a simple httpserver for sharing files,download or upload,completed by ad
 
 	
 2016.3.26:
-multiple threading version
+
+update to a multiple threading version
