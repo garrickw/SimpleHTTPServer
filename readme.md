@@ -4,5 +4,5 @@ This is a simple httpserver for sharing files,download or upload,completed by ad
 	deal_postdata()   #handle the upload data and save them into a file
 
 	
-2016.3.26
+2016.3.26:
 multiple threading version
