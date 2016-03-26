@@ -13,6 +13,7 @@ __all__ = ["SimpleHTTPRequestHandler"]
 import os
 import posixpath
 import BaseHTTPServer
+import SocketServer
 import urllib
 import cgi
 import sys
@@ -318,9 +319,12 @@ class SimpleHTTPRequestHandler(BaseHTTPServer.BaseHTTPRequestHandler):
         '.h': 'text/plain',
         })
 
+class ThreadedHTTPServer(SocketServer.ThreadingMixIn, BaseHTTPServer.HTTPServer):
+    pass 
+
 
 def test(HandlerClass = SimpleHTTPRequestHandler,
-         ServerClass = BaseHTTPServer.HTTPServer):
+         ServerClass = ThreadedHTTPServer):
     BaseHTTPServer.test(HandlerClass, ServerClass)
 
 
